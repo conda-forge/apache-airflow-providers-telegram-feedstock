@@ -22,9 +22,9 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - python >=3.6
-    - python-telegram-bot ==13.0
+    - python-telegram-bot >=13.0,<14.0
 
 test:
   imports:
