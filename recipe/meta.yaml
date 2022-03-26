@@ -1,7 +1,6 @@
 {% set name = "apache-airflow-providers-telegram" %}
 {% set version = "2.0.4" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,17 +10,17 @@ source:
   sha256: 0ff485b57da70f6269458857cf5362b93136ae00bbdb298b6d6cd548e030249b
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
     - python-telegram-bot >=13.0
 
@@ -36,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Telegram for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-telegram package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-telegram/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
