@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-telegram" %}
-{% set version = "4.4.0" %}
+{% set version = "4.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 52e16423d2964c802d6fc9c626afe275685da3e21c9467227fd02b43642d13a2
+  sha256: 912f9565c8c1510ea6f46243c31f11db3bea3736afe2f156066a40d56f828dfa
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.6.0
+    - apache-airflow >=2.7.0
     - python-telegram-bot >=20.2
 
 test:
