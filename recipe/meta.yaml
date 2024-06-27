@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-telegram" %}
-{% set version = "4.5.1" %}
+{% set version = "4.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: fc45fd0962eb74d38fc49c3d5488030e4fff90f792eb7b8e96d5ff2b7886c855
+  sha256: acc7a1bf84aee64469ee05f52352291bd7857f045153e226291b112db35e464f
 
 build:
   noarch: python
