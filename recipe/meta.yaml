@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-telegram" %}
-{% set version = "4.7.0" %}
+{% set version = "4.7.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0799bca6a9b93ee4c2f61ac89a07eaf991cf933703358150c0f363011e9fbcd6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_telegram-{{ version }}.tar.gz
+  sha256: 85ec7ef146c470d40ee8c52daaf986f990aa1793df0d2c9a0534bb9eabaaa6fb
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.0
+    - flit-core ==3.10.1
     - pip
   run:
     - python >={{ python_min }},<4.dev0
@@ -37,7 +37,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-telegram for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/telegram/LICENSE
+  license_file: src/airflow/providers/telegram/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-telegram/stable/index.html
   dev_url: https://github.com/apache/airflow/
