@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-telegram" %}
-{% set version = "4.8.2" %}
+{% set version = "4.8.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_telegram-{{ version }}.tar.gz
-  sha256: 87cda5f61c9840c63da740faba319cfa0db2e3ddd4dbf57fca3539de112ec075
+  sha256: 3f35a9c89f2f79c4595f43692fc2d34f43cb1a4e3b5ddcd3810a06647065a23c
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.8.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - python-telegram-bot >=20.2
