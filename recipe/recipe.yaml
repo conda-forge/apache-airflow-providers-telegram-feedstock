@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.telegram
+      - airflow.providers.telegram
       pip_check: true
       python_version: ${{ python_min }}.*
 
