@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-telegram
-  version: "4.9.1"
+  version: "4.9.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_telegram-${{ version }}.tar.gz
-  sha256: 14613041074d2f9b86a73de4019e4c18037f91921af7cfc4b8d4fbf28f6ff096
+  sha256: d92022f8ec7ff90f0a88e5545b7c50fa4d6f76de61103e27d2f6422aa1292829
 
 build:
   noarch: python
