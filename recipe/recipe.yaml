@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-telegram
-  version: "4.9.6"
+  version: "4.10.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_telegram-${{ version }}.tar.gz
-  sha256: 46abd30d7cb34696d43fc2672623d1f681919143c7f20bc48e58c5a1a5dcf62b
+  sha256: b05eb9c9f6430ea1906954dbfa92c11b146cbd24447b17ad47abcc56bae506d0
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
